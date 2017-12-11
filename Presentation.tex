@@ -1,0 +1,91 @@
+\documentclass[9pt]{beamer}
+
+\include{template}
+\usetheme[sectionpage=none,subsectionpage=progressbar,block=fill]{metropolis}
+
+\RequirePackage{tikz}
+\usetikzlibrary{arrows,positioning,fit,calc,positioning,decorations.pathreplacing}
+\usepackage[utf8]{inputenc}
+\graphicspath{{images/}{images/theme/}}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+%\usepackage[numbers]{natbib} %Apa style for citation
+
+%% DONNES UTILES A LA PAGE DE TITRE ET AU PIED DE PAGE...
+
+\title[Visual Based Localization]{Visual Based Localization}
+\subtitle{State of the Art \& investigation on Modality Transfer}
+\author{Nathan Piasco}
+\institute{pLaTINUM project, Le Creusot} % ON SE SERT DE INSTITUTE POUR METTER LE LIEUX DE LA CONF
+\date{12/10/2017}
+
+\definecolor{IGNVert}{RGB}{148, 192,  22}
+\definecolor{IGNGris}{RGB}{112, 119, 122}
+\definecolor{IGNRouge}{RGB}{255, 100, 100}
+\usepackage{ragged2e}
+
+\defbeamertemplate*{footline}{}{%
+  \begin{beamercolorbox}[wd=\textwidth, sep=3ex]{footline}%
+	\hspace{1cm}
+    \includegraphics[height=0.6cm]{logo/logo_le2i}
+	\hspace{0.1cm}
+    \includegraphics[height=0.6cm]{logo/logo_matis}
+    \usebeamerfont{page number in head/foot}%
+    \usebeamertemplate*{frame footer}
+    \hfill%
+	\insertsection~--~\textbf{\insertsubsection}
+    \hfill%
+    \usebeamertemplate*{frame numbering}
+  \end{beamercolorbox}%
+}
+
+\begin{document}
+
+
+\begin{frame}[plain,c]
+	\titlepage
+\end{frame}
+
+\begin{frame}[plain,c]
+	\tableofcontents
+\end{frame}
+
+\section{VBL State of the Art}
+
+\section{Modality Transfer for VBL}
+\input{sections/modality_introduction}
+\input{sections/modality_transfer}
+\input{sections/modality_results}
+
+\begin{frame}[plain,c]
+\centering
+\vfill
+\textbf{\huge{Thanks for your attention}}
+\vfill
+\huge{\textit{Discussion time}}
+\vfill
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Biblio
+\begin{frame}[allowframebreaks,plain]
+\frametitle{References}
+
+%\nocite{*}
+\bibliographystyle{apalike}
+\scriptsize{\bibliography{bib/mendeley}}
+
+\end{frame}
+
+\appendix
+\input{sections/annexes}
+
+ 
+\end{document}
