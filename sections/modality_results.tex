@@ -4,11 +4,13 @@
 
 \begin{frame}{Implementation details}
 	\vfill	
-	\textbf{Deep Learning framework:} \texttt{Pytorch}. Easy to use (Python!), fast to learn (1h tutorial), a lot of already available architectures
+	\textbf{Deep Learning framework:} \texttt{Pytorch}. Easy to use (Python!), fast to learn (1h blitz tutorial), a lot of already available architectures
 	\vfill
 	\textbf{Net architecture:} Alexnet. Begin with a little network (fast to train) to determinate the meta-parameters, then move to a deeper net (VGG).
 	\vfill
 	\textbf{Size of the training dataset:} 400 triplets (400 * 3 images * 2 modalities). Small dataset automatically created. I use \textbf{pre-trained network}!
+	\vfill
+	\textbf{Timing \& memory:} On Anakim, fine tuning one Alexnet for 40 epochs is about 1$\sim$2h	(with unoptimized code...). Take less than 1 Go of the GPU (Tesla K40c), so I can launch $\sim$10 training at the same time (to determine optimal meta-parameters).
 	\vfill
 \end{frame}
 
