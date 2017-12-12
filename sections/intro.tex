@@ -103,6 +103,8 @@
 		\item MLP for classification
 	\end{itemize}
 	All the weights (CNN + MLP) are optimized within a common framework \textbf{end-to-end}.
+
+	\hfill
 	
 	DL are now used in others computer vision applications.
 \end{frame}
@@ -117,3 +119,95 @@
 	
 	\cite{LIFT}
 \end{frame}
+
+\begin{frame}{Application: Region Proposal Network}
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/yolo.png}
+		\caption{RPN network}
+	\end{figure}
+	
+	Multi-task learning network (Region proposal \& classification)
+	Best Paper CVPR2017~\cite{YOLO9000}
+	
+	\cite{YOLO,FASTRCNN,FASTERRCNN}
+\end{frame}
+
+\begin{frame}{Application: Pixel-level Segmentation}
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/segnet.png}
+		\caption{Encoder-Decoder architecture for semantic segmentation}
+	\end{figure}
+	
+	Introducing max-unpooling to obtain an output as wide as the input.
+	
+	\cite{SEGNET}
+\end{frame}
+
+\begin{frame}{Application: Instance segmentation}
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/maskrcnn.png}
+		\caption{Instance and pixel-level segmentation}
+	\end{figure}
+	
+ 	Best Paper ICCV2017~\cite{MASKRCNN}
+\end{frame}
+
+\begin{frame}{Application: Depth from stereo}
+
+	\begin{figure}
+		\includegraphics[width=\linewidth]{images/gcnet.png}
+		\caption{Disparity inference from stereo pairs}
+	\end{figure}
+	
+	Double-inputs network
+	
+	\cite{GCNET}
+\end{frame}
+
+\begin{frame}{Application: Depth from mono}
+
+	\begin{figure}
+		\includegraphics[width=0.8\linewidth]{images/mono2depth.png}
+		\caption{Disparity inference from mono image}
+	\end{figure}
+	
+	Used to improve monocular SLAM~\cite{CNNSLAM}
+	
+	\cite{MONO2DEPTH}
+\end{frame}
+
+\begin{frame}{Application: Visual Odometry}
+
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{images/deepvo.png}
+		\caption{Motion estimation from image sequence}
+	\end{figure}
+		
+	\cite{DEEPVO}
+\end{frame}
+
+\begin{frame}{More Applications}
+
+	And much more:
+	\begin{itemize}
+		\item Video analysis
+		\item Scene understanding
+		\item Face recognition
+		\item Pose tracking
+		\item Crowd analysis
+		\item Suspicious behaviour detection
+		\item Data generation
+		\item ...
+	\end{itemize}
+	
+\end{frame}
+
+
+
+
+
+
+
